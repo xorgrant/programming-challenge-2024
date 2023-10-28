@@ -29,7 +29,7 @@ def Base64Obfuscation(text: str) -> str:
     return base64.b64encode(text.encode()).decode()
 
 
-def TextWrapObfuscation(text: str, width: int = 70, *a, **kw) -> str:
+def TextWrapObfuscation(text: str, width: int = len(constants.CHALLENGE_HINT), *a, **kw) -> str:
     """Wrap a long `text` into multi-lines of `width` length."""
     wrap: list[str] = textwrap.wrap(text=text, width=width, *a, **kw)
 
