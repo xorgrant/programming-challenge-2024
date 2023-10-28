@@ -50,11 +50,11 @@ class Challenge(object):
 
     @property
     @functools.lru_cache(maxsize=1)
-    def text(self):
+    def text(self) -> str:
         """Challenge raw text to be rendered."""
         return self.hint + constants.NEWLINE + self.puzzle
 
-    def render(self, save_as: str, font: ImageFont.FreeTypeFont = ImageFont.load_default()):
+    def render(self, save_as: str, font: ImageFont.FreeTypeFont = ImageFont.load_default()) -> None:
         """Render challenge `text` into an image."""
         # Since it's challenging to manually find an image's optimal width/height dimension, identify
         # it by measuring the dimension of a rendered 'A' and scale it using `Challenge.text` string.
