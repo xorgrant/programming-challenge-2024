@@ -18,7 +18,7 @@ NEWLINE: str = "\n"
     CHALLENGE_NOISE_CHARSET   := "AaO0o",
     CHALLENGE_NOISE_PARTITION := 0.75,
 
-    DISPLAY_FONT_FAMILY := "fonts/Terminus.ttf",
+    DISPLAY_FONT_FAMILY := "challenge/fonts/Terminus.ttf",
     DISPLAY_FONT_SIZE   := 17,
     DISPLAY_FONT        := ImageFont.truetype(
         font=DISPLAY_FONT_FAMILY,
