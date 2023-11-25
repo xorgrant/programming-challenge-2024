@@ -2,14 +2,21 @@
 #
 # This source code is licensed under the MIT license.
 
-PROJECT ?= $(shell pwd)
-SOURCE  ?= $(PROJECT)/challenge
+PROJECT   ?= $(shell pwd)
+CHALLENGE ?= $(PROJECT)/challenge
+SOLUTION  ?= $(PROJECT)/solution
 
-all: clean build
 
-build:
-	python $(SOURCE)
+.PHONY: all challenge solution
+
+all: clean challenge solution
+
+challenge:
+	@python $(CHALLENGE)
+
+solution:
+	@python $(SOLUTION)
 
 clean:
-	@find $(PROJECT) -type d -name "__pycache__" -exec rm -rf "{}" \; || true
-	@find $(PROJECT) -type f -iname "*.bmp" -exec rm -f "{}" \;
+	@rm -rf $(PROJECT)/charset
+	@rm -f  $(PROJECT)/programming_challenge_2024.bmp
