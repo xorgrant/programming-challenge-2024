@@ -11,7 +11,7 @@ NEWLINE: str = "\n"
 
 (
     CHALLENGE_SOLUTION := "___flag{h0uston_w3_have_a_pr0blem}___",
-    CHALLENGE_HINT     := "base64 " + string.ascii_uppercase + string.ascii_lowercase + string.digits + "=",
+    CHALLENGE_HINT     := "base64=" + string.ascii_uppercase + string.ascii_lowercase + string.digits,
 
     CHALLENGE_NOISE_MAXSIZE   := 10_000,  # characters
     CHALLENGE_NOISE_CHARSIZE  := CHALLENGE_NOISE_MAXSIZE - len(CHALLENGE_SOLUTION),  # characters

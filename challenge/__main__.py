@@ -60,7 +60,7 @@ class Challenge(object):
         # it by measuring the dimension of a rendered 'A' and scale it using `Challenge.text` string.
         (_, y0, _, y1) = font.getbbox('A')
         self._img_height: int = round(((y0 + y1) * (1 + self.text.count(constants.NEWLINE))))
-        self._img_width: int = round(font.getlength('A') * len(self.hint))
+        self._img_width: int = round(font.getlength('A') * (len(self.hint) + 1))
 
         self._img: Image = Image.new(
             mode="RGB",
