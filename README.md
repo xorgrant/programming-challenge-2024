@@ -3,7 +3,8 @@
 # Programming Challenge (2024)
 
 - [challenge](./challenge/) - Code used to generate the challenge.
-- [solution](./solution/) - My solution for the challenge.
+- [solution](./solution/) - My solution to the challenge.
+- [solution-submissions](./solution-submissions/) - Student solution submissions.
 
 ## License
 
